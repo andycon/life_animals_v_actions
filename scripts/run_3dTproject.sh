@@ -1,6 +1,9 @@
 #!/usr/bin/bash
 
 
+# Author: Andy Connolly
+# April 9, 2019
+
 cd ../
 outdir=`pwd`
 
