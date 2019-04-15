@@ -2,12 +2,9 @@
 
 
 cd ../
-outdir=`pwd`
 
-
-
-outdir=${outdir}/data
-#mkdir ${outdir}
+outdir=${DATA}/life
+mkdir ${outdir}
 
 
 
@@ -22,12 +19,12 @@ do
     echo ${s}
 
     subdir=${outdir}/${s}
-    #mkdir ${subdir}
+    mkdir ${subdir}
     cd ${s}func
     for i in $(seq 1 4)
     do
-        func=`ls *preproc_bold.nii.gz | grep run-0${i}`
-        #echo ${func}
+        func=`ls *T1w_desc-preproc_bold.nii.gz | grep run-0${i}`
+        echo ${func}
         output=${outdir}/${s}run-0${i}_bold_3dTproj.nii.gz
         if [ ! -f $output ]; then
 
